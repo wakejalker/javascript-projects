@@ -38,13 +38,15 @@ if (totalMassKg < maximumMassLimit) {
 }
 
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
-if (fuelTempCelcius >= -300 || fuelTempCelcius <= -150){
+if (fuelTempCelcius >= minimumFuelTemp || fuelTempCelcius <= maximumFuelTemp){
 } else {
-    preparedForLiftOff = false;++ 
+    preparedForLiftOff = false; 
 }
 // I have to admit I got this solution from when Vincent was sharing his screen in our combined studio, I'm not sure what line 41 does exactly.
 // But it's throwing this as an error?! Not really sure why. I have to close the bracket >:[
 //Going to try to finish coding what it should print and then troubleshoot. 
+// Took away the solution I got from Vincent and called the other variables instead of numbers - also took off the ++ from the end o fline 43 because I have no idea what it was doing. 
+
 
 // add logic below to verify the fuel level is at 100%
 if (fuelLevel === "100%"){
