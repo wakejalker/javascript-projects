@@ -11,6 +11,7 @@ table = [];
 table.push(element1);
 table.push(element2);
 table.push(element26);
+// can also do this like: table.push(element1, element2, element3);
 console.log(table);
 
 //3) Use bracket notation to examine the difference between printing 'table' with one index vs. two indices (table[][]).
@@ -18,8 +19,12 @@ console.log(table[1]);
 console.log(table[1][1]);
 
 //4) Using bracket notation and the table array, print the mass of element1, the name for element 2 and the symbol for element26.
-console.log(`${table[0][2]}, ${table[1][0]}, ${table[2][1]}`);
+console.log(`mass of element: ${table[0][2]}`);
+console.log(`name of element: ${table[1][0]}`);
+console.log(`symbol for element: ${table[2][1]}`);
 
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
  
 // didn't complete this part before class
+// in class: add another array to the arrays is all i need to do one big array with multiple arrays in it 
+
