@@ -24,7 +24,11 @@ console.log(`name of element: ${table[1][0]}`);
 console.log(`symbol for element: ${table[2][1]}`);
 
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
+let arrayThree = [['testing', 'the', 'first', 'level'],
+                ['second', 'level']]
  
 // didn't complete this part before class
 // in class: add another array to the arrays is all i need to do one big array with multiple arrays in it 
+// update, tried but i think i just made another 2d array? will go back over lecture today
+
 
