@@ -14,21 +14,15 @@ let fuelLevel =0, astronautsAboard = 0, altitude = 0;
 
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
-  while (astronautsAboard <= 7) {
+  while (astronautsAboard > 7 || astronautsAboard < 1) {
     astronautsAboard = input.question("Please enter the number of astronauts: ");
-  } if (astronautsAboard > 7) {
-    astronautsAboard = input.question("Please enter the number of astronauts: ");
-  }
-  // got this to ask me the question again but only once? not sure how to get it to keep asking... 
-  // oop it asked me twice even when I entered 5 hang on..
-  
+  }   
   
 //c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
 while (fuelLevel - 100 * astronautsAboard >= 0) {
-  altitutde += 50;
+  altitude += 50;
   fuelLevel -= 100 * astronautsAboard;
 }
-
 // this stumped me and had to check solution. bonus, I at least ifgured out how to rename all instances of a variable at once! 
 
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
@@ -36,10 +30,10 @@ while (fuelLevel - 100 * astronautsAboard >= 0) {
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
 let output = `The shuttle gained an altitude of ${altitude} km.`;
 
-if (altitutde >= 2000) {
+if (altitude >= 2000) {
   output = "Orbit achieved!";
 } else {
   output = "Failed to reach orbit.";
 }
 
-//leaving for class lol 
+// i think this works? nothin is printing 
