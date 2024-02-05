@@ -3,3 +3,4 @@ function callMe(func) {
 }
 
 callMe("Al");
+// throws a type error

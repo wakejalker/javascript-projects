@@ -84,6 +84,8 @@ function funPhrase(str){
 let str = 'Functions rock!'
 console.log(funPhrase(str));
 
+
+
 // Area of rectangle equal to length x width
 
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
@@ -92,19 +94,25 @@ console.log(funPhrase(str));
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
 
-function areaOfRectangle(length, width){
+// function areaOfRectangle(length, width){
+//     return length * width;
+// }
+
+// function areaOfShape(length, width){
+//     if (length !== 0 && width = 0) {
+//         return `The area of the rectangle is ${length * width} cm^2`; 
+//     } else {
+//         return `The area of the square is ${length * length} cm^2`;
+//     }
+// }
+// console.log(areaOfRectangle(4, 7));
+// console.log(areaOfShape(9));
+// commenting out my attempt and following along with Carrie's breakdown because I cannot seem to figure this out 
+
+function getArea(length, width = length){
     return length * width;
-}
+};
 
-function areaOfShape(length, width){
-    if (length !== 0 && width = 0) {
-        return `The area of the rectangle is ${length * width} cm^2`; 
-    } else {
-        return `The area of the square is ${length * length} cm^2`;
-    }
-}
-
-
-console.log(areaOfRectangle(4, 7));
-console.log(areaOfShape(9));
-
+console.log(`The area is ${getArea(2, 4)} cm^2.`);
+console.log(`The area is ${getArea(14, 7)} cm^2.`);
+console.log(`The area is ${getArea(20)} cm^2.`);
