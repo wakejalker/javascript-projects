@@ -50,5 +50,5 @@ let candidateA = {
    'astronautID':890
  };
  
- let crew = [candidateB,candidateD,candidateF];
+ let crew = [candidateB, candidateD, candidateF];
  

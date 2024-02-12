@@ -5,32 +5,54 @@ function selectRandomEntry(arr) {
 }
 
 // Code your buildCrewArray function here:
-let callCount = 0;
-let newArray = [];
-let crewArray = [];
 
-function buildCrewArray(idNumbers, animals) {
+// function buildCrewArray(idNumbers, animals) {
 
-  while (idNumbers.length !== 0 && callCount < 3){
-    let id = selectRandomEntry(idNumbers);
-    if (!newArray.includes(id)) {
-      newArray.push([id]);
-      callCount++;
+// let callCount = 0;
+// let newArray = [];
+// let selectedCrew = [];
+
+//   while (idNumbers.length !== 0 && callCount < 3){
+//     let id = selectRandomEntry(idNumbers);
+//     if (!newArray.includes(id)) {
+//       newArray.push([id]);
+//       callCount++;
+//     }
+//   }
+      
+//     for (let i = 0; i < animals.length; i++) {
+//       let candidateObj = animals[i];
+//         for (let j = 0; j < newArray.length; j++) {
+//           if (candidateObj.astronautID === newArray[j]) {
+//             selectedCrew.push(candidateObj.name);
+//           }
+//         }
+//     }
+//     return selectedCrew;
+// }
+
+function buildCrewArray (candidates, selectedID) {
+  let selectedCrew = [];
+  for (let i = 0; i < candidates.length; i++) {
+    if (selectedID.includes(candidates[i].astronautID)) {
+      selectedCrew.push(candidates[i]);
     }
   }
-      
-    for (let i = 0; i < animals.length; i++) {
-      let candidateObj = animals[i];
-        for (let j = 0; j < newArray.length; j++) {
-          if (candidateObj.astronautID === newArray[j]) {
-            crewArray.push(candidateObj.name);
-          }
-        }
-    }
+  return selectedCrew;
 }
 
 
 let idNumbers = [291, 414, 503, 599, 796, 890];
+
+
+let crewIDs = [];
+
+while (crewIDs.length < 3) {
+  let randomID = selectRandomEntry(idNumbers);
+  if (!crewIDs.includes(randomID)) {
+    crewIDs.push(randomID);
+  }
+}
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
@@ -76,7 +98,15 @@ let candidateF = {
   'astronautID':890
 };
 
-let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
+let animals = [candidateA, candidateB, candidateC, candidateD, candidateE, candidateF];
 
 // Code your template literal and console.log statements:
-console.log(`${crewArray[0]}, ${crewArray[1]}, and ${crewArray[2]} are going to space!`);
+let crew = buildCrewArray(animals, crewIDs);
+
+// console.log(crewIDs);
+// console.log(crew);
+// functions are working! 
+
+let statement = `${crew[0].name}, ${crew[1].name}, and ${crew[2].name} are going to space!`;
+
+console.log(statement);

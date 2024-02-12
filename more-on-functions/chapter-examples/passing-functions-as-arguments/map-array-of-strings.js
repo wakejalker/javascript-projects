@@ -2,13 +2,6 @@ let names = ["Chris", "Jim", "Sally", "Blake", "Paul", "John", "Courtney", "Carl
 
 // TODO: Write a mapping function
 // and pass it to .map() For each name in the array, map it to the first initial
-// let firstInitials = names.map(function () {
-// for (let i = 0; i < names.length; i++) {
-//     return names[i][0];
-// }
-// });
-// attempt 2, logs only C's...
-
 
 let firstInitials = names.map(function (names) {
     for (let i = 0; i < names.length; i++) {
@@ -16,7 +9,6 @@ let firstInitials = names.map(function (names) {
     }
     });
 console.log(firstInitials);
-// needed the parameter(argument?) in the function, silly goose. 
 
 // // example from book 
 // let nums = [3.14, 42, 4811];
@@ -39,4 +31,3 @@ console.log(firstInitials);
 //     return n/2;
 // });
 // console.log(halved);
-// // okay this one worked... time to go back to the top
