@@ -8,6 +8,7 @@ class Astronaut {
 }
 
 let fox = new Astronaut('Fox', 7, 12);
+// let hippo = new Astronaut('Hippo', 25, 1500);
 
 console.log(fox);
 console.log(fox.age, fox.color);
@@ -19,3 +20,6 @@ console.log(fox);
 console.log(fox.age, fox.color);
 
 //Try modifying or adding properties below.
+
+fox.behavior = 'nocturnal';
+console.log(fox.behavior);
