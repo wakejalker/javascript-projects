@@ -6,7 +6,7 @@ describe("hello world test", function(){
          expect(hello("Jest")).toBe("Hello, Jest!");
       });
 
-      it("should return a general greeting when name is not specified", function(){
+      test("should return a general greeting when name is not specified", function(){
         expect(hello()).toBe("Hello, World!");
     });
 
